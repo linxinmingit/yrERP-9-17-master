@@ -1,0 +1,59 @@
+{
+  "code": 0,
+  "msg": "获取成功",
+  "data": {
+    "trees":[
+    	{"id":"1","name": "用户管理", "value": "xsgl", "checked": true},
+    	{"id":"2","name": "用户组管理", "value": "sbgl", "checked": true, "list": [
+    		{"id":"3","name": "角色管理", "value": "sbgl-sbsjlb", "checked": true, "list":[
+    			{"id":"4","name": "添加角色", "value": "sbgl-sbsjlb-dj", "checked": true},
+    			{"id":"5","name": "角色列表", "value": "sbgl-sbsjlb-yl", "checked": false}
+    		]},
+            {"id":"6","name": "管理员管理", "value": "sbgl-sbsjlb", "checked": true, "list":[
+                {"id":"7","name": "添加管理员", "value": "sbgl-sbsjlb-dj", "checked": true},
+                {"id":"8","name": "管理员列表", "value": "sbgl-sbsjlb-yl", "checked": false},
+                {"id":"9","name": "管理员管理", "value": "sbgl-sbsjlb", "checked": true, "list":[
+                    {"id":"10","name": "添加管理员", "value": "sbgl-sbsjlb-dj", "checked": true},
+                    {"id":"11","name": "管理员列表", "value": "sbgl-sbsjlb-yl", "checked": false},
+                    {"id":"12","name": "管理员管理999999999999999999999999999999", "value": "sbgl-sbsjlb", "checked": true, "list":[
+                        {"id":"13","name": "添加管理员", "value": "sbgl-sbsjlb-dj", "checked": true},
+                        {"id":"14","name": "管理员列表", "value": "sbgl-sbsjlb-yl", "checked": false},
+                        {"id":"15","name": "管理员管理", "value": "sbgl-sbsjlb", "checked": true, "list":[
+                            {"id":"16","name": "添加管理员", "value": "sbgl-sbsjlb-dj", "checked": true},
+                            {"id":"17","name": "管理员列表", "value": "sbgl-sbsjlb-yl", "checked": false},
+                            {"id":"18","name": "管理员管理", "value": "sbgl-sbsjlb", "checked": true, "list":[
+                                {"id":"19","name": "添加管理员", "value": "sbgl-sbsjlb-dj", "checked": true},
+                                {"id":"20","name": "管理员列表", "value": "sbgl-sbsjlb-yl", "checked": false},
+                                {"id":"21","name": "管理员管理", "value": "sbgl-sbsjlb", "checked": true, "list":[
+                                    {"id":"22","name": "添加管理员", "value": "sbgl-sbsjlb-dj", "checked": true},
+                                    {"id":"23","name": "管理员列表", "value": "sbgl-sbsjlb-yl", "checked": false},
+                                    {"id":"24","name": "管理员管理", "value": "sbgl-sbsjlb", "checked": true, "list":[
+                                        {"id":"25","name": "添加管理员", "value": "sbgl-sbsjlb-dj", "checked": true},
+                                        {"id":"26","name": "管理员列表", "value": "sbgl-sbsjlb-yl", "checked": false},
+                                        {"id":"27","name": "管理员管理", "value": "sbgl-sbsjlb", "checked": true, "list":[
+                                            {"id":"28","name": "添加管理员", "value": "sbgl-sbsjlb-dj", "checked": true},
+                                            {"id":"29","name": "管理员列表", "value": "sbgl-sbsjlb-yl", "checked": false},
+                                            {"id":"30","name": "管理员管理", "value": "sbgl-sbsjlb", "checked": true, "list":[
+                                                {"id":"31","name": "添加管理员", "value": "sbgl-sbsjlb-dj", "checked": true},
+                                                {"id":"32","name": "管理员列表", "value": "sbgl-sbsjlb-yl", "checked": false},
+                                                {"id":"33","name": "管理员管理", "value": "sbgl-sbsjlb", "checked": true, "list":[
+                                                    {"id":"34","name": "添加管理员", "value": "sbgl-sbsjlb-dj", "checked": true},
+                                                    {"id":"35","name": "管理员列表", "value": "sbgl-sbsjlb-yl", "checked": false},
+                                                    {"id":"36","name": "管理员管理", "value": "sbgl-sbsjlb", "checked": true, "list":[
+                                                        {"id":"37","name": "添加管理员", "value": "sbgl-sbsjlb-dj", "checked": true},
+                                                        {"id":"38","name": "管理员列表", "value": "sbgl-sbsjlb-yl", "checked": false}
+                                                    ]}
+                                                ]}
+                                            ]}
+                                        ]}
+                                    ]}
+                                ]}
+                            ]}
+                        ]}
+                    ]}
+                ]}
+            ]}
+    	]}
+    ]
+  }
+}

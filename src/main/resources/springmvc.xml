@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<!-- 处理静态文件的引用，如jsp文件，编译后变成了.java文件，通过servlet处理 -->
+	<mvc:default-servlet-handler />
+	
+	<mvc:annotation-driven />
+
+	<aop:config proxy-target-class="true" />
+	
+	<!-- 扫描指定路径下的类上的注解，当造Controller层总有需要用到其它注解，在下面再配置一个<context:include-filter 								type="annotation" expression="注解类全名"/>就可以了 -->
+			<!-- use-default-filters="false"只有指定包含的时候才用，排除的时候用use-default-filters="ture"，可以不写，因为默认是					ture -->
+			<context:component-scan base-package="com.yr" use-default-filters="false">
+				<!-- 只扫描注解了@Controller的类，把它放进springMVC容器 -->
+				<context:include-filter type="annotation" 
+					expression="org.springframework.stereotype.Controller"/>
+				<!-- 只扫描注解了@ControllerAdvice的类（异常处理类），把它放进springMVC容器 -->
+				<context:include-filter type="annotation" 
+					expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+			</context:component-scan>
+	
+	<!-- 配置页面渲染器 -->
+	<bean id="jspViewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+	<!-- 配置结果视图的前缀和后缀 ,页面路径默认在WEB-INF下 /jsp/表示jsp文件在test文件夹 -->
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<!-- 直接相应通过springMVC渲染的页面 path="/login"是浏览器输入的URL，view-name="login"是前台页面-->
+	<mvc:view-controller path="/login" view-name="login"/>
+	<mvc:view-controller path="/index" view-name="index"/>
+	<mvc:view-controller path="/main" view-name="main"/>
+	<mvc:view-controller path="/menu" view-name="menu"/>
+	<mvc:view-controller path="/menu1" view-name="menu1"/>
+	<mvc:view-controller path="/menuAdd" view-name="menuAU"/>
+	<mvc:view-controller path="/a" view-name="authTree"/>
+	<mvc:view-controller path="/b" view-name="roleChoice"/>
+
+	<!-- 配置 SessionLocalResolver -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver"></bean>
+
+	<!-- 支持文件上传 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 默认编码 -->
+		<property name="defaultEncoding" value="utf-8" />
+		<!-- 文件大小最大值 -->
+		<property name="maxUploadSize" value="10485760000" />
+		<!-- 内存中的最大值 -->
+		<property name="maxInMemorySize" value="40960" />
+	</bean>
+</beans>
